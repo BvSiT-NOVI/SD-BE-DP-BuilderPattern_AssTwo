@@ -29,4 +29,12 @@ public class HouseA {
     public void setHouseType(HouseType houseType) {
         this.houseType = houseType;
     }
+
+    @Override
+    public String toString() {
+        return "HouseA{" +
+                "address=" + address.toString() +
+                ", houseType=" + houseType.toString() +
+                '}';
+    }
 }

@@ -1,18 +1,28 @@
 package nl.novi.dpcc.builder.domain.b;
 
+import nl.novi.dpcc.builder.domain.Address;
 import nl.novi.dpcc.builder.domain.Garage;
 import nl.novi.dpcc.builder.domain.Garden;
 import nl.novi.dpcc.builder.domain.HouseType;
 import nl.novi.dpcc.builder.domain.a.HouseA;
 import nl.novi.dpcc.builder.domain.a.HouseABuilder;
 
-public class HouseBBuilder extends HouseABuilder{
+public class HouseBBuilder {
+    private Address address;
+    private HouseType houseType;
+
     // Niet verplicht
     private Garden garden;
     private Garage garage;
 
-    public HouseBBuilder() {
+    public HouseBBuilder withHouseType(HouseType houseType){
+        this.houseType = houseType;
+        return this;
+    }
 
+    public HouseBBuilder withAddress(Address address){
+        this.address = address;
+        return this;
     }
 
     public HouseBBuilder withGarden(Garden garden){
@@ -25,12 +35,10 @@ public class HouseBBuilder extends HouseABuilder{
         return this;
     }
 
-    @Override
     public HouseB build(){
-        HouseA houseA = super.build();
-        HouseB houseB = new HouseB(houseA.getAddress(),houseA.getHouseType());
-        houseB.setGarden(garden);
+        HouseB houseB = new HouseB(address,houseType);
         houseB.setGarage(garage);
+        houseB.setGarden(garden);
         return houseB;
     }
 

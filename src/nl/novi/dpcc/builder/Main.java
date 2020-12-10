@@ -1,6 +1,8 @@
 package nl.novi.dpcc.builder;
 
 import nl.novi.dpcc.builder.domain.Address;
+import nl.novi.dpcc.builder.domain.Garage;
+import nl.novi.dpcc.builder.domain.Garden;
 import nl.novi.dpcc.builder.domain.a.HouseABuilder;
 import nl.novi.dpcc.builder.domain.HouseType;
 import nl.novi.dpcc.builder.domain.a.HouseA;
@@ -20,7 +22,11 @@ public class Main {
         HouseB houseB = new HouseBBuilder()
                 .withAddress(new Address("straatB",2,"1234AB","Amsterdam"))
                 .withHouseType(HouseType.APPARTMENT)
+                .withGarage(new Garage(10,3,"deur"))
+                .withGarden(new Garden(6,4,3))
                 .build();
+
+        System.out.println(houseB);
 
     }
 }

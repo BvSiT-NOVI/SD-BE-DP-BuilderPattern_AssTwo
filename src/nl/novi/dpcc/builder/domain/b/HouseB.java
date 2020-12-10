@@ -31,4 +31,14 @@ public class HouseB extends HouseA {
     public void setGarage(Garage garage) {
         this.garage = garage;
     }
+
+    @Override
+    public String toString() {
+        return "HouseB{" +
+                "address=" + getAddress().toString() +
+                ", houseType=" + getHouseType().toString() +
+                ", garden=" + garden.toString() +
+                ", garage=" + garage.toString() +
+                "} ";
+    }
 }

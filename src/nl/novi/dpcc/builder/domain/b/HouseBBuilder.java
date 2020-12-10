@@ -36,10 +36,11 @@ public class HouseBBuilder {
     }
 
     public HouseB build(){
-        HouseB houseB = (HouseB) new HouseABuilder()
+        HouseA houseA = new HouseABuilder()
                 .withHouseType(houseType)
                 .withAddress(address)
                 .build(); //Throws error if required attributes are not set
+        HouseB houseB = new HouseB(houseA.getAddress(),houseA.getHouseType());
         houseB.setGarage(garage);
         houseB.setGarden(garden);
         return houseB;

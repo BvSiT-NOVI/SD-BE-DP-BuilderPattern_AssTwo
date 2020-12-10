@@ -4,36 +4,16 @@ import nl.novi.dpcc.builder.domain.Address;
 import nl.novi.dpcc.builder.domain.Garage;
 import nl.novi.dpcc.builder.domain.Garden;
 import nl.novi.dpcc.builder.domain.HouseType;
+import nl.novi.dpcc.builder.domain.a.HouseA;
 
-public class HouseB {
-
-    //Verplicht
-    private Address address;
-    private HouseType houseType;
+public class HouseB extends HouseA {
 
     // Niet verplicht
     private Garden garden;
     private Garage garage;
 
     public HouseB(Address address, HouseType houseType) {
-        this.address = address;
-        this.houseType = houseType;
-    }
-
-    public Address getAddress() {
-        return address;
-    }
-
-    public void setAddress(Address address) {
-        this.address = address;
-    }
-
-    public HouseType getHouseType() {
-        return houseType;
-    }
-
-    public void setHouseType(HouseType houseType) {
-        this.houseType = houseType;
+        super(address, houseType);
     }
 
     public Garden getGarden() {

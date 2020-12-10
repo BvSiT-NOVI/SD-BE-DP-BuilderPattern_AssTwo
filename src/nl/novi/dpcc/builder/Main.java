@@ -4,6 +4,8 @@ import nl.novi.dpcc.builder.domain.Address;
 import nl.novi.dpcc.builder.domain.a.HouseABuilder;
 import nl.novi.dpcc.builder.domain.HouseType;
 import nl.novi.dpcc.builder.domain.a.HouseA;
+import nl.novi.dpcc.builder.domain.b.HouseB;
+import nl.novi.dpcc.builder.domain.b.HouseBBuilder;
 
 public class Main {
 
@@ -15,6 +17,10 @@ public class Main {
                             .build();
         System.out.println(houseA);
 
+        HouseB houseB = new HouseBBuilder()
+                .withAddress(new Address("straatB",2,"1234AB","Amsterdam"))
+                .withHouseType(HouseType.APPARTMENT)
+                .build();
 
     }
 }

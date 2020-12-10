@@ -9,4 +9,24 @@ public class HouseA {
     private Address address;
     private HouseType houseType;
 
+    public HouseA(Address address, HouseType houseType) {
+        this.address = address;
+        this.houseType = houseType;
+    }
+
+    public Address getAddress() {
+        return address;
+    }
+
+    public void setAddress(Address address) {
+        this.address = address;
+    }
+
+    public HouseType getHouseType() {
+        return houseType;
+    }
+
+    public void setHouseType(HouseType houseType) {
+        this.houseType = houseType;
+    }
 }
